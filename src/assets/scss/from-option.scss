@@ -1,0 +1,176 @@
+.fieldset {
+	width: 100%;
+	display: block;
+}
+.fieldset .input-select,
+.fieldset [type="checkbox"],
+.fieldset [type="checkbox"] + span,
+.fieldset [type="password"],
+.fieldset [type="radio"],
+.fieldset [type="radio"] + span,
+.fieldset [type="submit"],
+.fieldset [type="text"] {
+	display: block;
+	color: #aaa;
+	font-weight: 400;
+	font-size: 16px;
+}
+.fieldset [type="password"],
+.fieldset [type="submit"],
+.fieldset [type="text"] {
+	padding: 0 12.5px;
+}
+.fieldset [type="submit"] {
+	margin-top: 25px;
+	color: #fff;
+	cursor: pointer;
+}
+.fieldset textarea {
+	padding: 12.5px;
+	min-height: 70px;
+	resize: vertical;
+	color: #aaa;
+}
+.fieldset label.input-check {
+	float: left;
+	padding: 0 5.5px;
+	display: block;
+	line-height: 25px;
+}
+.fieldset label.input-check:after,
+.fieldset label.input-check:before {
+	display: block;
+	width: 100%;
+	clear: both;
+	content: "";
+}
+.fieldset label.input-check [type="checkbox"],
+.fieldset label.input-check [type="radio"] {
+	margin-right: 12.5px;
+}
+.fieldset label.input-select {
+	border-radius: 4px;
+}
+.fieldset label.input-select select {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+	text-indent: 5px;
+	position: relative;
+	top: -2px;
+	color: #aaa;
+	background: 0 0;
+}
+.fieldset label.input-check,
+.fieldset label.input-select {
+	cursor: pointer;
+}
+.fieldset legend {
+	margin-bottom: 10px;
+}
+
+.fieldset .input-select,
+.fieldset .input-text,
+.fieldset [type="checkbox"] + span:before,
+.fieldset [type="password"],
+.fieldset [type="text"],
+.fieldset textarea {
+	border-radius: 50%;
+}
+.fieldset [type="radio"] + span:before {
+	border-radius: 50%;
+}
+.fieldset [type="checkbox"],
+.fieldset [type="radio"] {
+	display: none;
+}
+.fieldset [type="checkbox"] + span:before,
+.fieldset [type="radio"] + span:before {
+	position: relative;
+	top: -1px;
+	content: "";
+	width: 12px;
+	height: 12px;
+	display: inline-block;
+	vertical-align: middle;
+	float: none;
+	margin-right: 12.5px;
+	background: #fff;
+	border: 1px solid $color-black;
+}
+.fieldset .input-select,
+.fieldset [type="password"],
+.fieldset [type="text"],
+.fieldset textarea {
+	background: #f5f5f5;
+}
+.fieldset [type="checkbox"],
+.fieldset [type="checkbox"] + span,
+.fieldset [type="password"],
+.fieldset [type="radio"],
+.fieldset [type="radio"] + span,
+.fieldset [type="submit"],
+.fieldset [type="text"],
+.fieldset fieldset,
+.fieldset label,
+.fieldset label input + span:before,
+.fieldset legend,
+.fieldset textarea {
+	-webkit-transition-property: background-color, color, border;
+	transition-property: background-color, color, border;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-timing-function: ease;
+	transition-timing-function: ease;
+	-webkit-transition-delay: 0s;
+	transition-delay: 0s;
+}
+.fieldset [type="submit"]:hover {
+	background: $color-black;
+}
+.fieldset .input-select:hover,
+.fieldset [type="password"]:hover,
+.fieldset [type="text"]:hover,
+.fieldset textarea:hover {
+	background: #fafafa;
+	border-color: #e1e1e1;
+	color: #969696;
+}
+.fieldset .input-select:active,
+.fieldset [type="password"]:active,
+.fieldset [type="text"]:active,
+.fieldset textarea:active {
+	background: #fafafa;
+	border-color: #cdcdcd;
+	color: #828282;
+}
+.fieldset .input-select:focus,
+.fieldset [type="password"]:focus,
+.fieldset [type="text"]:focus,
+.fieldset textarea:focus {
+	background: #fafafa;
+	border-color: #000000;
+	color: #000000;
+}
+.fieldset [type="checkbox"]:checked,
+.fieldset [type="checkbox"]:checked + span,
+.fieldset [type="radio"]:checked,
+.fieldset [type="radio"]:checked + span {
+	color: #424242;
+}
+.fieldset [type="checkbox"]:checked + span:before,
+.fieldset [type="radio"]:checked + span:before {
+	background: $color-primary-2;
+	border: 1px solid $color-default;
+}
+
+.fieldset label:hover [type="checkbox"]:not(:checked) + span:before,
+.fieldset label:hover [type="radio"]:not(:checked) + span:before {
+	background: #ebebeb;
+}
+
+.privacy-check{
+	&:before {
+		margin-right: 0 !important;
+	}
+}

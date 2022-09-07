@@ -1,0 +1,62 @@
+
+// * ==========================================================================
+// * 顏色
+// * ==========================================================================
+
+// 預設的文字顏色
+$color-default: #313131;
+
+
+// 主要配色
+$color-primary-1: #000000;
+$color-primary-2: #363636;
+$color-primary-3: #0153FE;
+
+//次要配色
+$color-white: #ffffff;
+$color-black: #202020;
+$color-orange: #f87147;
+$color-primary-4: #202020;
+$color-primary-5: #F09870;
+$color-primary-6: #D6E3E4;
+$color-primary-7: #A94B4B;
+$color-primary-8: #EBCDCC;
+
+// 灰階色
+$color-gray-1: #212121;
+$color-gray-2: #424242;
+$color-gray-3: #616161;
+$color-gray-4: #757575;
+$color-gray-5: #9E9E9E;
+$color-gray-6: #BDBDBD;
+$color-gray-7: #E0E0E0;
+$color-gray-8: #F5F5F5;
+$color-gray-9: #FAFAFA;
+
+
+
+// FOCUS 時的外框
+$focus-border: 0 0 0 0.2rem rgba($color-orange, 0.5);
+$focus-border-inset: inset 0 0 0 0.2rem rgba($color-orange, 0.8);
+
+// 行動版 HEADER BAR 的高度
+$mainHeader-height: 50px;
+
+// 電腦版 MENU 的高度
+$menu-height: 85px;
+
+
+// * ==========================================================================
+// * 文字字級大小設定
+// * ==========================================================================
+
+$fontsize: (
+    1: 2.25rem,
+    2: 2rem,
+    3: 1.5rem,
+    4: 1.375rem,
+    5: 1.25rem,
+    6: 1.125rem,
+    base: 1rem,
+    small-base: 0.9rem,
+);

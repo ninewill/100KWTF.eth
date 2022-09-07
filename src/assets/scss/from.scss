@@ -1,0 +1,544 @@
+// * ==========================================================================
+// * popup  表單彈窗
+// * ==========================================================================
+
+textarea:focus,
+select:focus,
+input:focus {
+  outline: 1px solid $color-primary-4;
+}
+
+.cd-popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s 0s, visibility 0s 0.3s;
+  z-index: 10001;
+
+  &.cd-popup2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s 0s, visibility 0s 0s;
+  }
+}
+.cd-popup.is-visible {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s 0s, visibility 0s 0s;
+}
+
+.cd-popup-container {
+  width: 350px;
+  height: 546px;
+  overflow-y: auto;
+  margin: 4em auto;
+  border: 1px solid $color-black;
+  background: $color-white;
+  display: block;
+  transition-property: transform;
+  transition-duration: 0.3s;
+
+  @include min-width(1025px) {
+    display: flex;
+    position: relative;
+    width: 90%;
+    max-width: 1053px;
+    height: 673px;
+    text-align: center;
+    transform: translateY(100%);
+    -webkit-backface-visibility: hidden;
+  }
+
+  &.cd-popup-container2 {
+    width: 100%;
+
+    @include min-width(1025px) {
+      max-width: 500px;
+      transform: translateY(0%);
+    }
+  }
+
+  //LEFT
+  .cd-popup-container-left {
+    @include min-width(1025px) {
+      width: 50%;
+      height: 100%;
+      border-right: 1px solid $color-black;
+      overflow: hidden;
+    }
+  }
+
+			 //LEFT TOP
+			 .cd-popup-container-left-top {
+				padding: 15px;
+				background-color: $color-primary-2;
+		
+				@include min-width(1025px) {
+					padding: 37px;
+				}
+			}
+	
+			.form-tag {
+				width: 100px;
+				margin: 0 auto;
+				text-align: center;
+				padding: 3px 5px;
+				background-color: $color-white;
+				border-radius: 5px;
+				font-weight: 400;
+				font-size: 14px;
+				color: $color-primary-2;
+		
+				@include min-width(1025px) {
+					width: auto;
+					display: inline-block;
+				}
+			}
+	
+			.form-title {
+				margin-top: 0.25rem;
+				font-weight: 700;
+				font-size: 18px;
+				color: $color-white;
+				text-align: center;
+		
+				@include min-width(1025px) {
+					font-size: 30px;
+				}
+			}
+		
+			.form-subtitle {
+				margin-top: 0.25rem;
+				font-weight: 500;
+				font-size: 14px;
+				color: $color-white;
+				text-align: center;
+		
+				@include min-width(1025px) {
+					font-size: 18px;
+				}
+			}
+
+	  //LEFT BOTTOM
+
+		.cd-popup-container-left-bottom {
+			position: relative;
+	
+			@include min-width(1025px) {
+				margin-top: 2rem;
+			}
+		}
+
+  //RIGHT
+  .cd-popup-container-right {
+    padding: 24px;
+    margin-top: 3rem;
+    overflow-y: auto;
+
+    @include min-width(1025px) {
+      width: 50%;
+      margin-top: 0;
+      padding: 32px 65px 32px 65px;
+    }
+
+    &.cd-popup-container-right2 {
+      @include min-width(1025px) {
+        width: 100%;
+        padding: 20px;
+      }
+    }
+  }
+
+  .cd-popup-container-right-top {
+  }
+
+  .cd-popup-container-right-top-title {
+    font-weight: 400;
+    font-size: 22px;
+		line-height: 33px;
+    color: $color-black;
+    text-align: center;
+
+    @include min-width(1025px) {
+      font-size: 26px;
+    }
+  }
+
+  .cd-popup-container-right-top-subtitle {
+    font-weight: 400;
+    font-size: 14px;
+		line-height: 22px;
+    color: $color-black;
+    text-align: center;
+
+    @include min-width(1025px) {
+      font-size: 18px;
+    }
+  }
+
+  //表單
+  .cd-popup-container-right-bottom {
+    margin-top: 18px;
+
+    fieldset {
+      position: relative;
+      margin-top: 20px;
+
+      @include min-width(1025px) {
+        font-size: 12px;
+      }
+    }
+
+    select {
+      width: 100%;
+      height: 50px;
+      padding: 0 12.5px;
+      display: block;
+      line-height: 50px;
+      background: #f5f5f5;
+      border-radius: 10px;
+      color: #9e9e9e;
+      font-size: 16px;
+      transition-duration: 0.3s;
+
+      &:hover {
+        color: #757575;
+      }
+    }
+
+    .fieldset-input::placeholder {
+      color: #9e9e9e;
+    }
+
+    .fieldset-input {
+      width: 100%;
+      height: 50px;
+      padding: 0 12.5px;
+      display: block;
+      line-height: 50px;
+      background: #f5f5f5;
+      border-radius: 10px;
+      font-size: 16px;
+      transition-duration: 0.3s;
+      border: none;
+
+			&::placeholder{
+				color: #aaa;
+				transition-duration: 0.3s;
+			}
+
+			&:hover {
+        
+				&::placeholder{
+					color: #757575;
+				}
+      }
+
+      &.error::placeholder {
+        color: $color-primary-7;
+      }
+
+      &.error:focus {
+        outline: 1px solid $color-primary-7;
+      }
+    }
+
+    #name-error,
+    #cellphone-error,
+		#email-error {
+			position: relative;
+      margin-left: 3rem;
+      float: left;
+      font-size: 1rem;
+			line-height: 36px;
+      color: $color-primary-7;
+
+			&::before{
+				content: "";
+				width: 20px;
+				height: 20px;
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: -2rem;
+				margin-top: -10px;
+				background-image: url("@/assets/images/icon/Alert.svg");
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+    }
+
+		#city-error,
+		#area-error{
+			position: absolute;
+			top: 3.3rem;
+			margin-left: 3rem;
+			font-size: 1rem;
+			line-height: 36px;	
+      color: $color-primary-7;
+
+			&::before{
+				content: "";
+				width: 20px;
+				height: 20px;
+				display: block;
+				position: absolute;
+				top: 50%;
+				left: -2rem;
+				margin-top: -10px;
+				background-image: url("@/assets/images/icon/Alert.svg");
+				background-repeat: no-repeat;
+				background-size: contain;
+			}
+		}
+
+    .select-form {
+      display: flex;
+    }
+
+    .select-form-block {
+      width: 50%;
+      height: 50px;
+      position: relative;
+      padding: 0 12.5px;
+      font-size: 16px;
+      display: block;
+      line-height: 50px;
+      color: #aaa;
+      background-color: #f5f5f5;
+      margin-right: 8px;
+      border: none;
+
+      /*移除箭頭樣式*/
+      appearance: none;
+
+      /*改變右邊箭頭樣式*/
+      background-image: url("@/assets/images/icon/arrow-select.svg");
+      background-size: 8%;
+      background-position: 90% 50%;
+      background-repeat: no-repeat;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.error {
+				margin-bottom: 2.5rem;
+        color: $color-primary-7;
+      }
+
+      &.error:focus {
+        outline: 1px solid $color-primary-7;
+      }
+    }
+
+
+		.input-check{
+			>span{
+				font-size: 14px;
+			}
+		}
+
+    /*IE隱藏箭頭樣式*/
+    .select-form-block::-ms-expand {
+      display: none;
+    }
+
+    .fieldset-title {
+      font-weight: 400;
+      font-size: 16px;
+      text-align: left;
+      color: $color-gray-3;
+    }
+
+    .privacy-text {
+      font-weight: 400;
+      font-size: 15px;
+      color: #757575;
+
+      @include min-width(1025px) {
+        font-size: 16px;
+      }
+
+      > a {
+        text-decoration: underline;
+        color: $color-primary-5;
+      }
+    }
+
+    .btn-submit-wrap {
+      width: 100%;
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+
+      @include min-width(1025px) {
+        width: auto;
+      }
+
+      @include min-width(1025px) {
+        &:hover {
+          .btn-submit {
+            background-color: $color-primary-5;
+            opacity: 0.9;
+          }
+        }
+      }
+    }
+
+    .btn-submit {
+      margin: 0 auto;
+      margin-top: 24px;
+      padding: 7px 51px;
+      border-radius: 5px;
+      transition: 0.2s;
+      border: none;
+			background-color: $color-primary-5;
+
+      @include min-width(1025px) {
+        background-color: $color-primary-5;
+      }
+    }
+  }
+}
+
+
+//關閉X按鈕
+.cd-popup-close {
+  position: absolute;
+  top: 100px;
+  right: 8%;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  overflow: hidden;
+  text-indent: 100%;
+  color: transparent;
+  white-space: nowrap;
+  z-index: 10;
+
+  @include min-width(1025px) {
+    top: 31px;
+    right: 28px;
+  }
+}
+
+.cd-popup-close-pc {
+  display: none;
+
+  @include min-width(1025px) {
+    display: block;
+  }
+}
+
+.cd-popup-close-m {
+  display: block;
+
+  @include min-width(1025px) {
+    display: none;
+  }
+}
+
+.cd-popup-close::before,
+.cd-popup-close::after {
+  content: "";
+  position: absolute;
+  top: 12px;
+  width: 29px;
+  height: 2px;
+  background-color: $color-white;
+
+  @include min-width(1025px) {
+    background-color: $color-primary-5;
+  }
+}
+.cd-popup-close {
+  &::before {
+    transform: rotate(45deg);
+    left: 1px;
+  }
+}
+.cd-popup-close {
+  &::after {
+    transform: rotate(-45deg);
+    right: 1px;
+  }
+}
+
+.is-visible .cd-popup-container {
+  transform: translateY(0%);
+
+  @include min-width(1025px) {
+    transform: translateY(0%);
+  }
+}
+
+.popup-swiper-form {
+  overflow: hidden;
+}
+.swiper-pagination {
+  bottom: -35px !important;
+
+  .swiper-pagination-bullet {
+    background-color: $color-white;
+    border: 1px solid $color-primary-2;
+    opacity: 1;
+
+    &.swiper-pagination-bullet-active {
+      background-color: $color-primary-2;
+    }
+  }
+}
+
+.check {
+  display: flex;
+}
+
+// * ==========================================================================
+// * banner 區塊
+// * ==========================================================================
+
+//彈性更換（顯示/隱藏）
+//-此區塊預留圖檔位置，顯示對應輪播圖文字
+//-提供圖檔大小為400x60px，置中輪播圖片
+.top-banner-hidden {
+  > .swiper-slide {
+    > .top-banner {
+      display: none;
+    }
+  }
+}
+
+.top-banner {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.main-banner {
+  margin-top: 0.5rem;
+}
+
+.main-banner {
+  width: 400px;
+  height: 263px;
+  margin: 0 auto;
+  margin-top: 1rem;
+
+  > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
