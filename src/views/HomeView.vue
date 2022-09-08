@@ -1,21 +1,152 @@
 <template>
   <!--main-->
-  <div class="wrap relative h-screen bg-blue-800 flex justify-center">
-    <div class="mouth-wrap flex justify-center w-1/2 self-end">
-      <div class="mouth relative flex justify-center w-full">
-        <div class="cube"></div>
-        <!--<img src="https://oasiscannabis.co/images/mouth.svg" alt="" />-->
-        <!--<img
-          src="https://oasiscannabis.co/images/eye.svg"
-          alt=""
-          class="absolute w-1/4"
-          style="top: 35%"
-        />-->
+  <div class="wrap-scroll">
+    <div class="circle-wrap">
+      <div class="circle">
+        <div class="circle_element">
+          <div class="video">
+            <video autoplay muted loop controls>
+              <source src="@/assets/images/video/100kwtf.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <div class="" style="height: 25vh">
+  <div class="info">
     lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem
+		lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem
+		lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
+    lorem lorem lorem lorem lorem lorem lorem lorem lorem
+		lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
     lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
     lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
     lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem
@@ -70,15 +201,19 @@ export default {
     var tl = gsap
       .timeline({
         scrollTrigger: {
-          trigger: ".wrap",
-          scrub: 0.3,
+          trigger: ".wrap-scroll",
+          scrub: 1,
           start: "top top",
           pin: true,
         },
       })
-      .to(".cube", {
-        css: { scale: 5, borderRadius: "0", duration: 3 },
-        transformOrigin: "bottom center",
+      .to(".circle_element", {
+        css: {
+          width: "100vw",
+          height: "100vh",
+          borderRadius: "0",
+          duration: 1,
+        },
       });
   },
 };
@@ -89,21 +224,73 @@ export default {
 @import "@/assets/scss/variables.scss";
 @import "@/assets/scss/reset.scss";
 
-.wrap {
+.wrap-scroll {
   width: 100%;
-	overflow: hidden;
+  height: 100vh;
+  padding-top: 80px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
-.mouth {
-  margin-top: -70%;
+.circle-wrap {
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.cube {
-  width: 200px;
-  height: 200px;
+.circle {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle_element {
+  width: 10em;
+  height: 10em;
   position: absolute;
-  top: 0;
-  border-radius: 50%;
-  border: 1px solid black;
+  border-radius: 15em;
+  overflow: hidden;
+  border: 1px none transparent;
+  outline-color: $color-white;
+  outline-offset: 20px;
+  outline-style: solid;
+  outline-width: 1px;
+  object-fit: cover;
+  display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.video {
+  position: absolute;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+  max-width: none;
+  min-height: 100vh;
+  min-width: 100vw;
+  -webkit-box-ordinal-group: 1;
+
+  > video {
+    background-size: cover;
+    background-position: 50% 50%;
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    right: -100%;
+    bottom: -100%;
+    top: -100%;
+    left: -100%;
+    object-fit: cover;
+    z-index: -100;
+  }
 }
 </style>
