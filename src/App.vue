@@ -40,7 +40,7 @@ body {
   position: relative;
   font-size: 1rem;
   letter-spacing: 0.5px;
-	background-color: $color-primary-1;
+	background-color: $color-black;
 }
 
 // * ==========================================================================
@@ -67,7 +67,7 @@ body {
   padding-left: 74px;
   padding-right: 30px;
   position: relative;
-  // height: 100%;
+
   @include min-width(768px) {
     padding-top: 60px;
     padding-bottom: 60px;
