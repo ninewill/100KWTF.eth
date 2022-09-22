@@ -29,8 +29,8 @@ export default {};
 	right: 0%;
 	bottom: auto;
 	z-index: 1000;
-	background-color: $color-black;
-  border-bottom: 1px solid $color-white;
+	background-color: $color-primary-1;
+  border-bottom: 1px solid $color-primary-2;
 }
 
 .nav{

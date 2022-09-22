@@ -5,7 +5,7 @@
       <div class="circle">
         <div class="circle_element">
           <div class="video">
-            <video autoplay muted loop>
+            <video autoplay muted loop playsinline>
               <source
                 src="@/assets/images/video/100kwtf-top.mp4"
                 type="video/mp4"
@@ -19,16 +19,26 @@
   <div class="wrapper">
     <div class="wtf-section">
       <div class="flex-container">
+        <div class="div-block-r">
+          <img src="@/assets/images/6257.png" alt="圖片" />
+        </div>
+        <div class="div-block-l">
+          <h2 class="h2">ABOUT ME</h2>
+          <p>我是編號6527，ₐₐₐₐₐₐₐᵤᵤᵤᵤᵤGGGₕₕₕₕₕ ₙₒ ₑₑₙₛₜₐgᵣᵤₘ ₙₒ dₑₛcᵤᵣd</p>
+        </div>
+      </div>
+      <div class="flex-container">
         <div class="div-block-l">
           <h2 class="h2">ART X NFT</h2>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Natus repudiandae consequuntur corrupti voluptas laboriosam, sequi, harum in consectetur autem dolorum aperiam itaque? Non culpa aliquam alias cupiditate debitis ut iste?
+            100kwtf.eth 為新一代數位藝術網站創建NFT。第一個系列”Genesis”於 2023
+            年 1 月在 OpenSea 上推出，標誌著我們進入 NFT 領域。
           </p>
         </div>
         <div class="div-block-r">
           <div class="ui-avatar">
             <div class="ui-video">
-              <video autoplay muted loop>
+              <video autoplay muted loop playsinline>
                 <source
                   src="@/assets/images/video/100kwtf-2.mp4"
                   type="video/mp4"
@@ -45,11 +55,52 @@
         <div class="div-block-l">
           <h2 class="h2">ARCHITECTURE x METAVERSE</h2>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi
-            reiciendis eaque debitis vitae! Quidem accusamus animi cum totam
-            natus, rerum corporis delectus, maiores nemo quis eveniet commodi
-            illum. Aut, illo!
+            100kwtf.eth
+            為開放且無限的元宇宙設計空間和資產。專注於網頁上優雅而微妙的設計。
           </p>
+        </div>
+      </div>
+      <div class="flex-container">
+        <div class="div-block-l">
+          <h2 class="h2">100KWTF.eth STUDIO</h2>
+          <p>
+            恭喜你即將進入我們的 VIP太空艙(100kwtf pod
+            -VIP)，裡面有許多不可思議的東西正在等著你。
+            <br />#彩色曲線的畫也許你會很感興趣
+          </p>
+        </div>
+        <div class="div-block-r">
+          <div class="btn">
+            <a href="https://oncyber.io/100kwtfpod" target="_blank">enter</a>
+          </div>
+        </div>
+      </div>
+      <div class="flex-container">
+        <div class="paragraph">
+          <p>100KWTF.ETH STUDIOS</p>
+        </div>
+      </div>
+      <div class="flex-container">
+        <div class="div-block-l">
+          <img src="@/assets/images/100kwtf-map.png" alt="圖片" />
+          <div class="map-info">
+            <div class="pfp">
+              <div class="goblin">
+                <div class="goblin__body">
+                  <img src="@/assets/images/6257-pfp-b.png" alt="圖片" />
+                </div>
+                <div class="goblin__head">
+                  <img src="@/assets/images/6257-pfp-h.png" alt="圖片" />
+                </div>
+              </div>
+            </div>
+            <p>
+              I'ₗₗ bₑ waᵢₜᵢₙg fₒᵣ yₒᵤ aₜ ₜₕₑ Naₜᵢₒₙaₗ Taᵢₚₑᵢ Uₙᵢᵥₑᵣₛᵢₜy ₒf Tₑcₕₙₒₗₒgy, a ₛₕₒₚₚᵢₙg ₘaₗₗ ₙₑaᵣby!
+            </p>
+          </div>
+        </div>
+        <div class="div-block-r">
+          <Map />
         </div>
       </div>
     </div>
@@ -59,8 +110,12 @@
 
 <script>
 // @ is an alias to /src
+import Map from '@/components/Map.vue';
 
 export default {
+  components: {
+    Map,
+  },
   mounted() {
     var tl = gsap
       .timeline({
@@ -121,7 +176,7 @@ export default {
     border-radius: 15em;
     overflow: hidden;
     border: 1px none transparent;
-    outline-color: $color-white;
+    outline-color: $color-primary-2;
     outline-offset: 20px;
     outline-style: solid;
     outline-width: 1px;
@@ -164,64 +219,99 @@ export default {
 
   .wtf-section {
     .flex-container {
-      display: flex;
-      margin-top: 5%;
+      margin-top: 10%;
       margin-right: 10%;
       margin-left: 10%;
+
+      @include min-width(1025px) {
+        margin-top: 5%;
+        display: flex;
+      }
 
       &:first-child {
         margin-top: 0;
       }
 
       .div-block-l {
-        width: 50%;
+        width: 100%;
         padding: 5%;
-        outline-color: $color-white;
+        outline-color: $color-primary-2;
         outline-offset: 0px;
         outline-style: solid;
         outline-width: 1px;
 
+        > img {
+          width: 100%;
+        }
+
+        @include min-width(1025px) {
+          width: 50%;
+        }
+
         > .h2 {
           padding-bottom: 1.5rem;
-          border-bottom: 1px solid $color-white;
-          font-size: 2.5vw;
-          color: $color-white;
+          border-bottom: 1px solid $color-primary-2;
+          font-size: 26px;
+          color: $color-primary-2;
+
+          @include min-width(1025px) {
+            font-size: 3vw;
+          }
         }
 
         > p {
           padding-top: 1.5rem;
-          font-size: 1.2vw;
+          font-size: 16px;
           line-height: 1.5;
-          color: $color-white;
+          color: $color-primary-2;
+
+          @include min-width(1025px) {
+            font-size: 1.8vw;
+          }
         }
       }
 
       .div-block-r {
-        width: 50%;
+        width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         padding: 5%;
-        outline-color: $color-white;
+        outline-color: $color-primary-2;
         outline-offset: 0px;
         outline-style: solid;
         outline-width: 1px;
+
+        > img {
+          width: 100%;
+        }
+
+        @include min-width(1025px) {
+          width: 50%;
+        }
 
         .ui-avatar {
           position: sticky;
           display: flex;
           overflow: hidden;
-          width: 288px;
-          height: 288px;
-          min-width: 288px;
-          min-height: 288px;
+          width: 188px;
+          height: 188px;
+          min-width: 188px;
+          min-height: 188px;
           justify-content: center;
           align-items: center;
           border-radius: 50%;
-          outline-color: #fff;
+          outline-color: $color-primary-2;
           outline-offset: 10px;
           outline-style: solid;
           outline-width: 1px;
+
+          @include min-width(1025px) {
+            width: 288px;
+            height: 288px;
+            min-width: 288px;
+            min-height: 288px;
+          }
 
           .ui-video {
             width: 100%;
@@ -247,11 +337,146 @@ export default {
         }
       }
     }
+
+    .paragraph {
+      width: 100%;
+      padding-right: 0%;
+      padding-left: 0%;
+      outline-color: #fff;
+      outline-offset: 0px;
+      outline-style: none;
+      outline-width: 1px;
+
+      > p {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: #fff;
+        color: #dbd7d3;
+        font-size: 24px;
+        font-weight: 300;
+        text-align: center;
+      }
+    }
   }
 }
 
-.div{
+//goblin
+
+.map-info {
+  display: flex;
+  align-items: center;
+
+  .pfp {
+    width: 30%;
+
+    .goblin {
+      position: relative;
+
+      .goblin__head {
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: wiggle 0.5s linear infinite;
+
+        > img {
+          width: 100%;
+        }
+      }
+
+      .goblin__body {
+        width: 100px;
+        height: 100px;
+
+        > img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @keyframes wiggle {
+    50% {
+      transform: rotate(-3deg);
+    }
+  }
+
+  > p {
+    width: 70%;
+    padding: 10px;
+    line-height: 1.5;
+    font-size: 16px;
+
+    @include min-width(1025px) {
+      font-size: 1.3vw;
+    }
+  }
+}
+
+.div {
   margin-top: 3rem;
   height: 50px;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+
+  @include min-width(1025px) {
+    margin-top: 2rem;
+  }
+
+  > a {
+    position: relative;
+    padding: 0.25rem 1rem;
+    display: block;
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 700;
+    transition: 0.2s;
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      width: 145px;
+      height: 45px;
+      border: 1px solid $color-primary-2;
+      transition: 0.2s;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0px;
+      left: 5px;
+      width: 145px;
+      height: 45px;
+      border: 1px solid $color-primary-2;
+      transition: 0.2s;
+    }
+
+    @include min-width(1025px) {
+      &:hover {
+        opacity: 0.6;
+
+        &::before {
+          top: -2.5px;
+          left: 0;
+        }
+
+        &::after {
+          top: -2.5px;
+          left: 0;
+        }
+      }
+    }
+  }
 }
 </style>

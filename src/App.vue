@@ -40,7 +40,7 @@ body {
   position: relative;
   font-size: 1rem;
   letter-spacing: 0.5px;
-	background-color: $color-black;
+	background-color: $color-primary-1;
 }
 
 // * ==========================================================================
@@ -97,7 +97,7 @@ body {
 .layout-1 {
   width: 100%;
   min-height: 776px;
-  background-color: $color-black;
+  background-color: $color-primary-1;
   transition: 0.2s;
   min-height: 776px;
 
