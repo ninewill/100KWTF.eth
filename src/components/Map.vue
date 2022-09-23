@@ -36,7 +36,7 @@ export default {
   height: 450px;
 
   @include min-width(1025px) {
-    height: 700px;
+    height: 600px;
   }
 }
 

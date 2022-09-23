@@ -20,11 +20,13 @@
     <div class="wtf-section">
       <div class="flex-container">
         <div class="div-block-r">
-          <img src="@/assets/images/6257.png" alt="圖片" />
+          <div class="gob-6257">
+            <img src="@/assets/images/6257.png" alt="圖片" />
+          </div>
         </div>
         <div class="div-block-l">
           <h2 class="h2">ABOUT ME</h2>
-          <p>我是編號6527，ₐₐₐₐₐₐₐᵤᵤᵤᵤᵤGGGₕₕₕₕₕ ₙₒ ₑₑₙₛₜₐgᵣᵤₘ ₙₒ dₑₛcᵤᵣd</p>
+          <p>我是編號6257，ₐₐₐₐₐₐₐᵤᵤᵤᵤᵤGGGₕₕₕₕₕ ₙₒ ₑₑₙₛₜₐgᵣᵤₘ ₙₒ dₑₛcᵤᵣd</p>
         </div>
       </div>
       <div class="flex-container">
@@ -80,28 +82,8 @@
           <p>100KWTF.ETH STUDIOS</p>
         </div>
       </div>
-      <div class="flex-container">
-        <div class="div-block-l">
-          <img src="@/assets/images/100kwtf-map.png" alt="圖片" />
-          <div class="map-info">
-            <div class="pfp">
-              <div class="goblin">
-                <div class="goblin__body">
-                  <img src="@/assets/images/6257-pfp-b.png" alt="圖片" />
-                </div>
-                <div class="goblin__head">
-                  <img src="@/assets/images/6257-pfp-h.png" alt="圖片" />
-                </div>
-              </div>
-            </div>
-            <p>
-              I'ₗₗ bₑ waᵢₜᵢₙg fₒᵣ yₒᵤ aₜ ₜₕₑ Naₜᵢₒₙaₗ Taᵢₚₑᵢ Uₙᵢᵥₑᵣₛᵢₜy ₒf Tₑcₕₙₒₗₒgy, a ₛₕₒₚₚᵢₙg ₘaₗₗ ₙₑaᵣby!
-            </p>
-          </div>
-        </div>
-        <div class="div-block-r">
-          <Map />
-        </div>
+      <div class="flex-container tab-wrap">
+        <Tab />
       </div>
     </div>
   </div>
@@ -110,27 +92,28 @@
 
 <script>
 // @ is an alias to /src
-import Map from '@/components/Map.vue';
+
+import Tab from "@/components/Tab.vue";
 
 export default {
   components: {
-    Map,
+    Tab,
   },
   mounted() {
     var tl = gsap
       .timeline({
         scrollTrigger: {
-          trigger: '.wrap-scroll',
+          trigger: ".wrap-scroll",
           scrub: 1,
-          start: 'top top',
+          start: "top top",
           pin: true,
         },
       })
-      .to('.circle_element', {
+      .to(".circle_element", {
         css: {
-          width: '100vw',
-          height: '100vh',
-          borderRadius: '0',
+          width: "100vw",
+          height: "100vh",
+          borderRadius: "0",
           duration: 1,
         },
       });
@@ -138,10 +121,10 @@ export default {
 };
 </script>
 
-<style lang="scss">
-@import '@/assets/scss/mixin.scss';
-@import '@/assets/scss/variables.scss';
-@import '@/assets/scss/reset.scss';
+<style lang="scss" scoped>
+@import "@/assets/scss/mixin.scss";
+@import "@/assets/scss/variables.scss";
+@import "@/assets/scss/reset.scss";
 
 .wrap-scroll {
   width: 100%;
@@ -282,8 +265,21 @@ export default {
         outline-style: solid;
         outline-width: 1px;
 
+        &.item-star {
+          align-items: start;
+        }
+
         > img {
           width: 100%;
+        }
+
+        .gob-6257 {
+          width: 50%;
+
+          > img {
+            width: 100%;
+						vertical-align: middle;
+          }
         }
 
         @include min-width(1025px) {
@@ -353,65 +349,14 @@ export default {
         padding-top: 5px;
         padding-bottom: 5px;
         background-color: #fff;
-        color: #dbd7d3;
+        color: $color-primary-3;
         font-size: 24px;
         font-weight: 300;
         text-align: center;
       }
     }
-  }
-}
 
-//goblin
-
-.map-info {
-  display: flex;
-  align-items: center;
-
-  .pfp {
-    width: 30%;
-
-    .goblin {
-      position: relative;
-
-      .goblin__head {
-        width: 100px;
-        height: 100px;
-        position: absolute;
-        top: 0;
-        left: 0;
-        animation: wiggle 0.5s linear infinite;
-
-        > img {
-          width: 100%;
-        }
-      }
-
-      .goblin__body {
-        width: 100px;
-        height: 100px;
-
-        > img {
-          width: 100%;
-        }
-      }
-    }
-  }
-
-  @keyframes wiggle {
-    50% {
-      transform: rotate(-3deg);
-    }
-  }
-
-  > p {
-    width: 70%;
-    padding: 10px;
-    line-height: 1.5;
-    font-size: 16px;
-
-    @include min-width(1025px) {
-      font-size: 1.3vw;
+    .tab-wrap {
     }
   }
 }
@@ -439,7 +384,7 @@ export default {
     transition: 0.2s;
 
     &::before {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       top: -5px;
@@ -451,7 +396,7 @@ export default {
     }
 
     &::after {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       top: 0px;
