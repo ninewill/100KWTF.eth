@@ -82,7 +82,7 @@ export default {
     }
 
     .map-pop {
-			height: 500px;
+			height: 475px;
 
       > img {
         width: 100%;
@@ -200,14 +200,14 @@ export default {
     width: 30%;
 
     .goblin {
+      display: flex;
+      justify-content: flex-end;
       position: relative;
 
       .goblin__head {
         width: 100px;
         height: 100px;
         position: absolute;
-        top: 0;
-        left: 0;
         animation: wiggle 0.5s linear infinite;
 
         > img {
@@ -239,7 +239,7 @@ export default {
     font-size: 16px;
 
     @include min-width(1025px) {
-      font-size: 1.3vw;
+      font-size: 1.1vw;
     }
   }
 }

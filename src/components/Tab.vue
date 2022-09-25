@@ -54,17 +54,17 @@
             <Step2 />
           </div>
         </div>
-				<div class="page page3" v-if="pageIdx === 2">
+        <div class="page page3" v-if="pageIdx === 2">
           <div class="mid">
             <Step3 />
           </div>
         </div>
-				<div class="page page4" v-if="pageIdx === 3">
+        <div class="page page4" v-if="pageIdx === 3">
           <div class="mid">
             <Step4 />
           </div>
         </div>
-				<div class="page page5" v-if="pageIdx === 4">
+        <div class="page page5" v-if="pageIdx === 4">
           <div class="mid">
             <Step5 />
           </div>
@@ -75,11 +75,11 @@
 </template>
 
 <script>
-import Step1 from "@/components/Step1.vue";
-import Step2 from "@/components/Step2.vue";
-import Step3 from "@/components/Step3.vue";
-import Step4 from "@/components/Step4.vue";
-import Step5 from "@/components/Step5.vue";
+import Step1 from '@/components/Step1.vue';
+import Step2 from '@/components/Step2.vue';
+import Step3 from '@/components/Step3.vue';
+import Step4 from '@/components/Step4.vue';
+import Step5 from '@/components/Step5.vue';
 
 export default {
   components: {
@@ -104,10 +104,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/scss/mixin.scss";
-@import "@/assets/scss/variables.scss";
-@import "@/assets/scss/reset.scss";
-@import "@/assets/scss/main.scss";
+@import '@/assets/scss/mixin.scss';
+@import '@/assets/scss/variables.scss';
+@import '@/assets/scss/reset.scss';
+@import '@/assets/scss/main.scss';
 
 // * ==========================================================================
 // * TAB 區塊
@@ -123,6 +123,7 @@ export default {
       padding: 1rem;
       display: block;
       border-right: 1px solid $color-primary-2;
+      cursor: pointer;
 
       &:last-child {
         border-right: none;
@@ -132,33 +133,33 @@ export default {
         display: flex;
         align-items: center;
         justify-content: center;
-				flex-direction: column;
+        flex-direction: column;
         cursor: pointer;
         transition: 0.2s;
 
-				@include min-width(1025px) {
-					flex-direction: row;
-				}
+        @include min-width(1025px) {
+          flex-direction: row;
+        }
 
         > span {
           display: block;
-					font-size: 0.9rem;
-					text-align: center;
+          font-size: 0.9rem;
+          text-align: center;
 
-					@include min-width(1025px) {
-						margin-right: 1rem;
-						font-size: 1vw;
-					}
+          @include min-width(1025px) {
+            margin-right: 1rem;
+            font-size: 1vw;
+          }
         }
 
         .tab-img {
-					margin-top: 0.5rem;
+          margin-top: 0.5rem;
           width: 100%;
 
-					@include min-width(1025px) {
-						margin-top: 0;
-						width: 15%;
-					}
+          @include min-width(1025px) {
+            margin-top: 0;
+            width: 15%;
+          }
 
           > img {
             width: 100%;
@@ -190,7 +191,9 @@ export default {
   margin-top: 3rem;
 
   .card-page {
-    height: 80vh;
+    @include min-width(1025px) {
+      height: 65vh;
+    }
 
     .page {
       height: 100%;

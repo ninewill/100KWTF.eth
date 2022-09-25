@@ -7,7 +7,7 @@
           <div class="video">
             <video autoplay muted loop playsinline>
               <source
-                src="@/assets/images/video/100kwtf-top.mp4"
+                src="@/assets/images/video/100kwtf-top1.mp4"
                 type="video/mp4"
               />
             </video>
@@ -20,8 +20,18 @@
     <div class="wtf-section">
       <div class="flex-container">
         <div class="div-block-r">
-          <div class="gob-6257">
+          <!-- <div class="gob-6257">
             <img src="@/assets/images/6257.png" alt="圖片" />
+          </div> -->
+          <div class="pfp">
+            <div class="goblin">
+              <div class="goblin__body">
+                <img src="@/assets/images/6257-pfp-b.png" alt="圖片" />
+              </div>
+              <div class="goblin__head">
+                <img src="@/assets/images/6257-pfp-h.png" alt="圖片" />
+              </div>
+            </div>
           </div>
         </div>
         <div class="div-block-l">
@@ -93,7 +103,7 @@
 <script>
 // @ is an alias to /src
 
-import Tab from "@/components/Tab.vue";
+import Tab from '@/components/Tab.vue';
 
 export default {
   components: {
@@ -103,17 +113,17 @@ export default {
     var tl = gsap
       .timeline({
         scrollTrigger: {
-          trigger: ".wrap-scroll",
+          trigger: '.wrap-scroll',
           scrub: 1,
-          start: "top top",
+          start: 'top top',
           pin: true,
         },
       })
-      .to(".circle_element", {
+      .to('.circle_element', {
         css: {
-          width: "100vw",
-          height: "100vh",
-          borderRadius: "0",
+          width: '100vw',
+          height: '100vh',
+          borderRadius: '0',
           duration: 1,
         },
       });
@@ -122,9 +132,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/scss/mixin.scss";
-@import "@/assets/scss/variables.scss";
-@import "@/assets/scss/reset.scss";
+@import '@/assets/scss/mixin.scss';
+@import '@/assets/scss/variables.scss';
+@import '@/assets/scss/reset.scss';
 
 .wrap-scroll {
   width: 100%;
@@ -249,7 +259,7 @@ export default {
           color: $color-primary-2;
 
           @include min-width(1025px) {
-            font-size: 1.8vw;
+            font-size: 1.1vw;
           }
         }
       }
@@ -278,7 +288,7 @@ export default {
 
           > img {
             width: 100%;
-						vertical-align: middle;
+            vertical-align: middle;
           }
         }
 
@@ -361,6 +371,44 @@ export default {
   }
 }
 
+//GOBLIN 6257
+.pfp {
+  width: 100%;
+
+  .goblin {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    .goblin__head {
+      width: 300px;
+      height: 300px;
+      position: absolute;
+      animation: wiggle 0.5s linear infinite;
+
+      > img {
+        width: 100%;
+      }
+    }
+
+    .goblin__body {
+      width: 300px;
+      height: 300px;
+      background-color: $color-primary-4;
+
+      > img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@keyframes wiggle {
+  50% {
+    transform: rotate(-5deg);
+  }
+}
+
 .div {
   margin-top: 3rem;
   height: 50px;
@@ -379,12 +427,12 @@ export default {
     padding: 0.25rem 1rem;
     display: block;
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: 700;
     transition: 0.2s;
 
     &::before {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       top: -5px;
@@ -396,7 +444,7 @@ export default {
     }
 
     &::after {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       top: 0px;
