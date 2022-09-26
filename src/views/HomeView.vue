@@ -92,6 +92,11 @@
           <p>100KWTF.ETH STUDIOS</p>
         </div>
       </div>
+			<div class="flex-container">
+				<div class="roadmap">
+					<img src="@/assets/images/roadmap.png" alt="圖片" />
+				</div>
+			</div>
       <div class="flex-container tab-wrap">
         <Tab />
       </div>
@@ -343,6 +348,12 @@ export default {
         }
       }
     }
+
+		.roadmap{
+			>img{
+				width: 100%;
+			}
+		}
 
     .paragraph {
       width: 100%;
