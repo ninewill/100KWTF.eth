@@ -76,6 +76,9 @@
         </div>
         <div class="page page5" v-if="pageIdx === 4">
           <div class="mid">
+            <div class="river">
+              <img src="@/assets/images/river.png" alt="圖片" />
+            </div>
             <Step5 />
           </div>
         </div>
@@ -244,5 +247,11 @@ export default {
 			}
 		}
 	}
+}
+
+.river{
+  >img{
+    width: 100%;
+  }
 }
 </style>
