@@ -61,6 +61,16 @@
         </div>
         <div class="page page4" v-if="pageIdx === 3">
           <div class="mid">
+						<div class="letter">
+							<div class="h3">北荒科學院：第一學府或菁英專校？</div>
+							<div class="letter-p">
+								<p>『6257觀點』年度評鑑將北荒科學院選為台北夜城中等教育機構第一名，四度蟬聯寶座。而該期刊絕大部分的廣告收益雖來自該學院背後的企業，
+									編輯人員卻表示這樣的金錢往來對排名不造成影響。
+								</p>
+								<p>妳是曾經北荒科學院的學員，因此作為報酬該學院會贈與妳一組科技晶片，晶片就在三創科技幻舞總部大樓的6F，找到switch的專員並跟他說你要領取6257晶片</p>
+								<p><i>三創科技幻舞總部是由6257集團所創立.....</i></p>
+							</div>
+						</div>
             <Step4 />
           </div>
         </div>
@@ -192,7 +202,7 @@ export default {
 
   .card-page {
     @include min-width(1025px) {
-      height: 65vh;
+      //height: 65vh;
     }
 
     .page {
@@ -203,5 +213,36 @@ export default {
       }
     }
   }
+}
+
+.letter{
+	margin: 0 auto;
+
+	@include min-width(1025px) {
+		max-width: 500px;
+	}
+
+	.h3{
+		font-size: 1.2rem;
+
+		@include min-width(1025px) {
+			font-size: 1.5vw;
+		}
+	}
+
+	.letter-p{
+		margin-top: 1rem;
+		
+		>p{
+			margin-bottom: 0.5rem;
+			font-size: 1rem;
+
+			>i{
+				font-size: 0.8rem;
+				font-style: italic;
+				color: $color-gray-4;
+			}
+		}
+	}
 }
 </style>

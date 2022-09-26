@@ -2,6 +2,7 @@
   <div class="step4">
     <div class="div-block-l">
       <div class="map-pop">
+        <div class="pulse"></div>
         <img src="@/assets/images/100kwtf-map.png" alt="圖片" />
       </div>
       <div class="map-info">
@@ -59,8 +60,9 @@ export default {
 // * ==========================================================================
 
 .step4 {
+	margin-top: 5%;
+
   @include min-width(1025px) {
-    margin-top: 5%;
     display: flex;
   }
 
@@ -82,12 +84,37 @@ export default {
     }
 
     .map-pop {
-			height: 475px;
+      height: 475px;
+      position: relative;
 
       > img {
         width: 100%;
         height: 100%;
         object-fit: contain;
+      }
+
+      .pulse {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+				background: #ff5e5eb1;
+        box-shadow: 0 0 0 #ff5e5e7a;
+        position: absolute;
+        top: 45%;
+        left: 47%;
+        animation: pulse 2s infinite;
+      }
+    }
+
+    @keyframes pulse {
+      0% {
+        box-shadow: 0 0 0 0 #ff5e5e7a;
+      }
+      70% {
+        box-shadow: 0 0 0 10px rgba(204,169,44, 0);
+      }
+      100% {
+        box-shadow: 0 0 0 0 rgba(204,169,44, 0);
       }
     }
 
@@ -192,7 +219,7 @@ export default {
 //goblin
 
 .map-info {
-	margin-top: 1rem;
+  margin-top: 1rem;
   display: flex;
   align-items: center;
 

@@ -94,7 +94,8 @@
       </div>
 			<div class="flex-container">
 				<div class="roadmap">
-					<img src="@/assets/images/roadmap.png" alt="圖片" />
+					<img class="road-pc" src="@/assets/images/roadmap.png" alt="圖片" />
+					<img class="road-mb" src="@/assets/images/roadmap-m.png" alt="圖片" />
 				</div>
 			</div>
       <div class="flex-container tab-wrap">
@@ -350,6 +351,23 @@ export default {
     }
 
 		.roadmap{
+
+			.road-pc{
+				display: none;
+
+				@include min-width(1025px) {
+					display: block;
+				}
+			}
+
+			.road-mb{
+				display: block;
+				
+				@include min-width(1025px) {
+					display: none;
+				}
+			}
+
 			>img{
 				width: 100%;
 			}
