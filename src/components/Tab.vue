@@ -61,24 +61,37 @@
         </div>
         <div class="page page4" v-if="pageIdx === 3">
           <div class="mid">
-						<div class="letter">
-							<div class="h3">北荒科學院：第一學府或菁英專校？</div>
-							<div class="letter-p">
-								<p>『6257觀點』年度評鑑將北荒科學院選為台北夜城中等教育機構第一名，四度蟬聯寶座。而該期刊絕大部分的廣告收益雖來自該學院背後的企業，
-									編輯人員卻表示這樣的金錢往來對排名不造成影響。
-								</p>
-								<p>妳是曾經北荒科學院的學員，因此作為報酬該學院會贈與妳一組科技晶片，晶片就在三創科技幻舞總部大樓的6F，找到switch的專員並跟他說你要領取6257晶片</p>
-								<p><i>三創科技幻舞總部是由6257集團所創立.....</i></p>
-							</div>
-						</div>
+            <div class="letter">
+              <div class="h3">北荒科學院：第一學府或菁英專校？</div>
+              <div class="letter-p">
+                <p>
+                  『6257觀點』年度評鑑將北荒科學院選為台北夜城中等教育機構第一名，四度蟬聯寶座。而該期刊絕大部分的廣告收益雖來自該學院背後的企業，
+                  編輯人員卻表示這樣的金錢往來對排名不造成影響。
+                </p>
+                <p>
+                  妳是曾經北荒科學院的學員，因此作為報酬該學院會贈與妳一組科技晶片，晶片就在三創科技幻舞總部大樓的6F，找到switch的專員並跟他說你要領取6257晶片
+                </p>
+                <p><i>三創科技幻舞總部是由6257集團所創立.....</i></p>
+              </div>
+            </div>
             <Step4 />
           </div>
         </div>
         <div class="page page5" v-if="pageIdx === 4">
           <div class="mid">
-            <div class="river">
-              <img src="@/assets/images/river.png" alt="圖片" />
+						<div class="letter">
+              <div class="h3">開啟世界名畫3.0</div>
+              <div class="letter-p">
+                <p>
+                  當一個企業在資本的驅動下，只要可以牟利。就可以對環境資源進行禍害
+                </p>
+                <p>
+                  在你面前呈現的世界名畫之一的清明上河圖，6257企業透過高科技結合古蹟鑄造
+                </p>
+                <p><i>尋找出企業團隊的核心成員</i></p>
+              </div>
             </div>
+						<SwiperIdx />
             <Step5 />
           </div>
         </div>
@@ -88,11 +101,12 @@
 </template>
 
 <script>
-import Step1 from '@/components/Step1.vue';
-import Step2 from '@/components/Step2.vue';
-import Step3 from '@/components/Step3.vue';
-import Step4 from '@/components/Step4.vue';
-import Step5 from '@/components/Step5.vue';
+import Step1 from "@/components/Step1.vue";
+import Step2 from "@/components/Step2.vue";
+import Step3 from "@/components/Step3.vue";
+import Step4 from "@/components/Step4.vue";
+import Step5 from "@/components/Step5.vue";
+import SwiperIdx from "@/components/SwiperIdx.vue";
 
 export default {
   components: {
@@ -101,6 +115,7 @@ export default {
     Step3,
     Step4,
     Step5,
+		SwiperIdx
   },
   data() {
     return {
@@ -112,15 +127,16 @@ export default {
       this.pageIdx = idx;
     },
   },
-  mounted() {},
+  mounted() {
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/scss/mixin.scss';
-@import '@/assets/scss/variables.scss';
-@import '@/assets/scss/reset.scss';
-@import '@/assets/scss/main.scss';
+@import "@/assets/scss/mixin.scss";
+@import "@/assets/scss/variables.scss";
+@import "@/assets/scss/reset.scss";
+@import "@/assets/scss/swiper.scss";
 
 // * ==========================================================================
 // * TAB 區塊
@@ -218,40 +234,41 @@ export default {
   }
 }
 
-.letter{
-	margin: 0 auto;
+.letter {
+  margin: 0 auto;
 
-	@include min-width(1025px) {
-		max-width: 500px;
-	}
+  @include min-width(1025px) {
+    max-width: 500px;
+  }
 
-	.h3{
-		font-size: 1.2rem;
+  .h3 {
+    font-size: 1.2rem;
 
-		@include min-width(1025px) {
-			font-size: 1.5vw;
-		}
-	}
+    @include min-width(1025px) {
+      font-size: 1.5vw;
+    }
+  }
 
-	.letter-p{
-		margin-top: 1rem;
-		
-		>p{
-			margin-bottom: 0.5rem;
-			font-size: 1rem;
+  .letter-p {
+    margin-top: 1rem;
 
-			>i{
-				font-size: 0.8rem;
-				font-style: italic;
-				color: $color-gray-4;
-			}
-		}
-	}
+    > p {
+      margin-bottom: 0.5rem;
+      font-size: 1rem;
+
+      > i {
+        font-size: 0.8rem;
+        font-style: italic;
+        color: $color-gray-4;
+      }
+    }
+  }
 }
 
-.river{
-  >img{
+.river {
+  > img {
     width: 100%;
   }
 }
+
 </style>

@@ -28,6 +28,8 @@ export default {};
 // * ==========================================================================
 
 .step5 {
+	margin-top: 3rem;
+	
   @include min-width(1025px) {
     margin-top: 5%;
     display: flex;

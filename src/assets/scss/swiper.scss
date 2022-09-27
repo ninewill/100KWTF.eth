@@ -85,6 +85,10 @@
     -o-transition-property: transform;
     transition-property: transform;
     transition-property: transform, -webkit-transform;
+
+		>img{
+			width: 100%;
+		}
 }
 
 .swiper-slide-invisible-blank {
@@ -313,8 +317,8 @@
 }
 
 .swiper-pagination-bullet {
-    width: 8px;
-    height: 8px;
+    width: 12px;
+    height: 12px;
     display: inline-block;
     border-radius: 100%;
     background: #000;
@@ -338,7 +342,7 @@ button.swiper-pagination-bullet {
 
 .swiper-pagination-bullet-active {
     opacity: 1;
-    background: #007aff;
+    background: $color-primary-1;
 }
 
 .swiper-container-vertical>.swiper-pagination-bullets {
@@ -358,7 +362,7 @@ button.swiper-pagination-bullet {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
-    width: 8px;
+    width: 12px;
 }
 
 .swiper-container-vertical>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
