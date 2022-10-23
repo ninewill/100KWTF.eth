@@ -16,15 +16,6 @@
 			<div class="swiper-slide">
         <img src="@/assets/images/swiper/5.png" alt="圖片" />
       </div>
-			<div class="swiper-slide">
-        <img src="@/assets/images/swiper/6.png" alt="圖片" />
-      </div>
-			<div class="swiper-slide">
-        <img src="@/assets/images/swiper/7.png" alt="圖片" />
-      </div>
-			<div class="swiper-slide">
-        <img src="@/assets/images/swiper/8.png" alt="圖片" />
-      </div>
     </div>
 		<div class="swiper-pagination"></div>
     <div class="swiper-button-next"></div>

@@ -35,7 +35,7 @@
       </a>
       <a @click="handChangePage(4)" :class="{ active: pageIdx === 4 }">
         <div class="tab-list">
-          <span>STEP 5</span>
+          <span>STEP 5 food</span>
           <div class="tab-img">
             <!--<img src="@/assets/images/icon/tesla.png" alt="圖片" />-->
           </div>
@@ -79,20 +79,25 @@
         </div>
         <div class="page page5" v-if="pageIdx === 4">
           <div class="mid">
-						<div class="letter">
-              <div class="h3">開啟世界名畫3.0</div>
+            <div class="letter">
+              <div class="h3">唯有愛與美食不可辜負</div>
               <div class="letter-p">
-                <p>
-                  當一個企業在資本的驅動下，只要可以牟利。就可以對環境資源進行禍害
-                </p>
-                <p>
-                  在你面前呈現的世界名畫之一的清明上河圖，6257企業透過高科技結合古蹟鑄造
-                </p>
-                <p><i>尋找出企業團隊的核心成員</i></p>
+                <p>能不用為了前途，薪資，所煩擾，在這用餐</p>
+                <p>能夠好好的在這享受，放鬆讓一整日的疲倦都能丟在這</p>
+                <p><i>滿足妳的口腹之慾</i></p>
               </div>
             </div>
-						<SwiperIdx />
-            <Step5 />
+            <div class="video">
+              <video autoplay muted loop playsinline>
+                <source src="@/assets/images/video/food.mp4" type="video/mp4" />
+              </video>
+            </div>
+
+            <div class="sub-title">
+              <h3 class="h3">菜單精選</h3>
+            </div>
+            <SwiperIdx />
+            <!-- <Step5 /> -->
           </div>
         </div>
       </div>
@@ -101,12 +106,12 @@
 </template>
 
 <script>
-import Step1 from "@/components/Step1.vue";
-import Step2 from "@/components/Step2.vue";
-import Step3 from "@/components/Step3.vue";
-import Step4 from "@/components/Step4.vue";
-import Step5 from "@/components/Step5.vue";
-import SwiperIdx from "@/components/SwiperIdx.vue";
+import Step1 from '@/components/Step1.vue';
+import Step2 from '@/components/Step2.vue';
+import Step3 from '@/components/Step3.vue';
+import Step4 from '@/components/Step4.vue';
+import Step5 from '@/components/Step5.vue';
+import SwiperIdx from '@/components/SwiperIdx.vue';
 
 export default {
   components: {
@@ -115,7 +120,7 @@ export default {
     Step3,
     Step4,
     Step5,
-		SwiperIdx
+    SwiperIdx,
   },
   data() {
     return {
@@ -127,16 +132,15 @@ export default {
       this.pageIdx = idx;
     },
   },
-  mounted() {
-  },
+  mounted() {},
 };
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/scss/mixin.scss";
-@import "@/assets/scss/variables.scss";
-@import "@/assets/scss/reset.scss";
-@import "@/assets/scss/swiper.scss";
+@import '@/assets/scss/mixin.scss';
+@import '@/assets/scss/variables.scss';
+@import '@/assets/scss/reset.scss';
+@import '@/assets/scss/swiper.scss';
 
 // * ==========================================================================
 // * TAB 區塊
@@ -271,4 +275,30 @@ export default {
   }
 }
 
+.sub-title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+
+  > .h3 {
+    font-size: 1.5rem;
+
+    @include min-width(1025px) {
+      font-size: 2rem;
+    }
+  }
+}
+
+.video {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+
+  > video {
+    width: 100%;
+    border: 1px solid $color-black;
+    padding: 1rem;
+  }
+}
 </style>
